@@ -1,0 +1,31 @@
+{
+  "name": "bonbon",
+  "version": "1.0.0",
+  "description": "see readme",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bucarjeva/bonbon.git"
+  },
+  "keywords": [
+    "bon",
+    "hungy",
+    "broke",
+    "plz"
+  ],
+  "author": "kolaboratorja",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bucarjeva/bonbon/issues"
+  },
+  "homepage": "https://github.com/bucarjeva/bonbon#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fs": "^0.0.1-security",
+    "https": "^1.0.0",
+    "mime": "^3.0.0"
+  }
+}
