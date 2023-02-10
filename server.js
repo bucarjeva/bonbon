@@ -6,7 +6,7 @@ const express = require('express');
 /**
  * Database connection
  */
-require("api/models/dbConn.js");
+require("./api/models/dbConn.js");
 
 /**
  * Create server
@@ -17,7 +17,7 @@ const app = express();
 /** 
  * Configure server
  */
-const apiRouter = require("api/routes/router.js");
+const apiRouter = require("./api/routes/router.js");
 
 /**
  * Start server

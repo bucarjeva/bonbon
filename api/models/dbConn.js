@@ -4,7 +4,7 @@ let mongoURI = "mongodb://bonbon-db/bonbon";
 mongoose.connect(mongoURI);
 
 mongoose.connection.on("connected", () => {
-    console.log("[Mongoose] Connected to " + dbURI);
+    console.log("[Mongoose] Connected to " + mongoURI);
 });
 
 mongoose.connection.on("error", (err) => {
