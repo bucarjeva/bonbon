@@ -1,0 +1,27 @@
+version: "3.2"
+
+services:
+  db:
+    image: mongo
+    container_name: bonbon-db
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "27017:27017"
+    networks:
+      - bonbon-network
+
+  api:
+    build: ./
+    container_name: bonbon-api
+    ports:
+      - "3000:3000"
+    networks:
+      - bonbon-network
+    depends_on:
+      - db
+
+networks:
+  bonbon-network:
+    name: bonbon-network
+    driver: bridge

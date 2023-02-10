@@ -6,14 +6,22 @@ const express = require('express');
 /**
  * Database connection
  */
+require("api/models/dbConn.js");
 
 /**
  * Create server
- * Start server
  */
 const port = process.env.PORT || 3000;
 const app = express();
 
+/** 
+ * Configure server
+ */
+const apiRouter = require("api/routes/router.js");
+
+/**
+ * Start server
+ */
 if(process.env.NODE_ENV !== 'test') {
     app.listen(port, () => {
         console.log(`Server is listening on port ${port}, running in ${
