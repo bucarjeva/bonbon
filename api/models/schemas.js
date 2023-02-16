@@ -23,6 +23,8 @@ const mongoose = require("mongoose");
  *      example: 9d328aab7fdaf6d103260c91c4f128bf2e26cdf4653e24f5a4a360b6c34ae320 
  *     event_id:
  *      type: array
+ *      items: 
+ *       type: string
  *      description: User borrowed/lent money
  *    required:
  *     - _id
@@ -76,7 +78,7 @@ const userSchema = new mongoose.Schema({
  *      type: array
  *      items:
  *       type: string
- *       description: ID of the payee
+ *      description: ID of the payee
  *     amount:
  *      type: number
  *      description: A positive number, equal to doplacilo
@@ -103,23 +105,23 @@ const eventSchema = new mongoose.Schema({
     amount: {
         type: Number,
         required: [true, "Amount is required"]
-    },
+    }
 });
 
 /**
- *  @openapi
- *  components:
- *    schemas:
- *      Restaurant:
- *       type: object
- *       description: A restaurant
- *       properties:
- *        name:
- *         type: string
- *         description: The name of the restaurant
- *        example: "FRI menza"
- *       required:
- *        - name
+ * @openapi
+ * components:
+ *   schemas:
+ *    Restaurant:
+ *     type: object
+ *     description: A restaurant
+ *     properties:
+ *      name:
+ *       type: string
+ *       description: The name of the restaurant
+ *       example: "FRI menza"
+ *     required:
+ *      - name
  */
 const restaurantSchema = new mongoose.Schema({
     name: {

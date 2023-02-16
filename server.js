@@ -65,14 +65,7 @@ apiRouter.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 /**
  * Start server
  */
-if(process.env.NODE_ENV !== 'test') {
-    app.listen(port, () => {
-        console.log(`Server is listening on port ${port}, running in ${
-            process.env.NODE_ENV || "development"} mode`);
-    });
-} else {
-    app.listen(port, () => {
-        console.log(`Server is listening on port ${port}, running in ${
-            process.env.NODE_ENV || "development"} mode`);
-    });
-}
+app.listen(port, () => {
+    console.log(`Server is listening on port ${port}, running in ${
+        process.env.NODE_ENV} mode`);
+});
